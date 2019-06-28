@@ -1,0 +1,8 @@
+$env:SSL_CERT_FILE="{{pkgPathFor "core/cacerts"}}/ssl/cert.pem"
+
+$splay_duration = Get-Random -InputObject (0..{{cfg.splay}}) -Count 1
+
+cd {{pkg.path}}
+
+sleep $splay_duration
+{{pkgPathFor "thelunaticscripter/chef-client"}}/chef/bin/chef-client.bat -z -l {{cfg.log_level}} -c {{pkg.svc_config_path}}/client-config.rb --once --no-fork --run-lock-timeout {{cfg.run_lock_timeout}}

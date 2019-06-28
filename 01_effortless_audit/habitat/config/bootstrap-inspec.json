@@ -1,0 +1,12 @@
+{
+    "reporter": {
+        "automate" : {
+            "stdout" : "false",
+            "url" : "https://<REPLACE ME>/data-collector/v0/",
+            "token" : "<REPLACE ME>",
+            "node_name" : "packer-windows-baseline",
+            "verify_ssl" : "true",
+            "node_uuid" : "06b283f4-6199-4480-990e-6ae354ab3fed"
+        }
+    }
+  }

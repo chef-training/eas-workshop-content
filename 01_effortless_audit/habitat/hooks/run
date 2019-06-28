@@ -1,0 +1,34 @@
+$env:PATH = "{{pkgPathFor "stuartpreston/inspec"}}/bin;$env:PATH"
+
+$CONFIG="{{pkg.svc_config_path}}/inspec_exec_config.json"
+$INTERVAL="{{cfg.interval}}"
+$LOG_FILE="{{pkg.svc_path}}/logs/inspec_log.txt"
+$PROFILE_IDENT="{{pkg.origin}}/{{pkg.name}}"
+$PROFILE_PATH="{{pkg.path}}/dist"
+
+
+while ($true) {
+    Write-Host "Executing $PROFILE_IDENT"
+    inspec exec $PROFILE_PATH --json-config $CONFIG | Tee-Object $LOG_FILE
+
+    $exit_code= $LastExitCode
+    if ($exit_code -eq 1) {
+        Write-Host "InSpec run failed."
+    }
+    elseif ($exit_code -eq 0) {
+        Write-Host "No controls failed or were skipped"
+    }
+    elseif ($exit_code -eq 100) {
+        Write-Host "At least 1 control failed"
+    }
+    elseif ($exit_code -eq 101) {
+        Write-Host "No controls failed but at least 1 skipped."
+    }
+    else {
+        Write-Host "This is new $exit_code"
+    }
+    Write-Host "Results are logged here: $LOG_FILE"
+
+    echo "sleeping for $INTERVAL seconds"
+    Start-Sleep $INTERVAL
+}

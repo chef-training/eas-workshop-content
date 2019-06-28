@@ -1,0 +1,12 @@
+name: audit-baseline
+title: Effortless Audit Baseline
+maintainer: humans@chef.io
+copyright: chef
+copyright_email: you@example.com
+license: Apache-2.0
+summary: Effortless Audit Windows Baseline
+version: 0.1.0
+
+depends:
+  - name: windows-baseline
+    url: https://github.com/dev-sec/windows-baseline/archive/master.tar.gz

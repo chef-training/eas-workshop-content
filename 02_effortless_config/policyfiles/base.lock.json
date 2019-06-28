@@ -1,0 +1,158 @@
+{
+  "revision_id": "3289524f50a8fc9ddae34de0af3d89f721555247fd0f7df7fb9d8d3c6a0a281c",
+  "name": "base",
+  "run_list": [
+    "recipe[patching::default]",
+    "recipe[hardening::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "hardening": {
+      "version": "0.1.0",
+      "identifier": "32f95d6ce5d9c59c30046cb98b40d45f5ac2d456",
+      "dotted_decimal_identifier": "14347928489810373.43962891928963904.233506009699414",
+      "source": "../cookbooks/hardening",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/chef/effortless_config.git",
+        "revision": "88c3efc5b53c7b03b834e0236b8e8949fd4fc534",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/hardening"
+      }
+    },
+    "os-hardening": {
+      "version": "4.0.0",
+      "identifier": "e20b98be94004b4013698889ce3ce232f88fbb27",
+      "dotted_decimal_identifier": "63626095396913227.18035742492708412.248708546411303",
+      "cache_key": "os-hardening-4.0.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/os-hardening/versions/4.0.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/os-hardening/versions/4.0.0/download",
+        "version": "4.0.0"
+      }
+    },
+    "patching": {
+      "version": "0.1.0",
+      "identifier": "b864f798241b308df989477fdc23890116e988b9",
+      "dotted_decimal_identifier": "51902410286963504.39962339721600035.150637772376249",
+      "source": "../cookbooks/patching",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/chef/effortless_config.git",
+        "revision": "88c3efc5b53c7b03b834e0236b8e8949fd4fc534",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/patching"
+      }
+    },
+    "windows-hardening": {
+      "version": "0.9.1",
+      "identifier": "fb514509b65b7fa504bdf236ec6ece70d9657452",
+      "dotted_decimal_identifier": "70739576111913855.46448585016274030.226984078963794",
+      "cache_key": "windows-hardening-0.9.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/windows-hardening/versions/0.9.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/windows-hardening/versions/0.9.1/download",
+        "version": "0.9.1"
+      }
+    },
+    "windows-security-policy": {
+      "version": "0.3.9",
+      "identifier": "b2e3ba1e3ced20a311a7903a59c8198183a82ec7",
+      "dotted_decimal_identifier": "50352934365228320.45899832580790728.28044050312903",
+      "cache_key": "windows-security-policy-0.3.9-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/windows-security-policy/versions/0.3.9/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/windows-security-policy/versions/0.3.9/download",
+        "version": "0.3.9"
+      }
+    }
+  },
+  "default_attributes": {
+    "hardening": {
+
+    },
+    "patching": {
+
+    },
+    "applications": {
+      "linux": {
+
+      },
+      "windows": {
+
+      }
+    }
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "hardening",
+        "= 0.1.0"
+      ],
+      [
+        "os-hardening",
+        "= 4.0.0"
+      ],
+      [
+        "patching",
+        "= 0.1.0"
+      ],
+      [
+        "windows-hardening",
+        "= 0.9.1"
+      ],
+      [
+        "windows-security-policy",
+        "= 0.3.9"
+      ]
+    ],
+    "dependencies": {
+      "hardening (0.1.0)": [
+        [
+          "os-hardening",
+          ">= 0.0.0"
+        ],
+        [
+          "windows-hardening",
+          ">= 0.0.0"
+        ]
+      ],
+      "os-hardening (4.0.0)": [
+
+      ],
+      "patching (0.1.0)": [
+
+      ],
+      "windows-hardening (0.9.1)": [
+        [
+          "windows-security-policy",
+          ">= 0.0.0"
+        ]
+      ],
+      "windows-security-policy (0.3.9)": [
+
+      ]
+    }
+  }
+}
