@@ -1,0 +1,14 @@
+# Use this file to templatize your application's native configuration files.
+# See the docs at https://www.habitat.sh/docs/create-packages-configure/.
+# You can safely delete this file if you don't need it.
+interval = 1800
+splay = 180
+run_lock_timeout = 1800
+log_level = "warn"
+chef_client_ident = "" # this is blank by default so it can be populated from the bind
+env_path_prefix = ";C:/WINDOWS/system32/WindowsPowerShell/v1.0;C:/ProgramData/chocolatey/bin"
+ssl_verify_mode = ":verify_peer"
+[data_collector]
+enable = false
+token = "set_to_your_token"
+server_url = "set_to_your_url"
