@@ -7,7 +7,7 @@ pkg_license=('Apache-2.0')
 pkg_deps=(core/tomcat8 core/corretto core/mongo-tools)
 pkg_build_deps=(core/corretto core/maven)
 pkg_svc_user="root"
-pkg_binds=(
+pkg_binds_optional=(
   [database]="port"
 )
 pkg_exports=(
