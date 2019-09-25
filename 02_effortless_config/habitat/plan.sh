@@ -1,5 +1,5 @@
 pkg_name=config-baseline
-pkg_origin=chef
+pkg_origin=eas-workshop
 pkg_version="0.1.0"
 pkg_maintainer="The Habitat Maintainers <humans@habitat.sh>"
 pkg_license=("Apache-2.0")
