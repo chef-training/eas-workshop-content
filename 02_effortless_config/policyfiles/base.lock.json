@@ -1,5 +1,5 @@
 {
-  "revision_id": "3289524f50a8fc9ddae34de0af3d89f721555247fd0f7df7fb9d8d3c6a0a281c",
+  "revision_id": "44bf07a19f97bdee40069b25bcb6f33787c4f3c7b8d5b961177db997840bc596",
   "name": "base",
   "run_list": [
     "recipe[patching::default]",
@@ -11,21 +11,11 @@
   "cookbook_locks": {
     "hardening": {
       "version": "0.1.0",
-      "identifier": "32f95d6ce5d9c59c30046cb98b40d45f5ac2d456",
-      "dotted_decimal_identifier": "14347928489810373.43962891928963904.233506009699414",
+      "identifier": "7bfab0ba4e68737fd0cd6f6541ba02662f702028",
+      "dotted_decimal_identifier": "34897059082299507.35976902798033338.2637905797160",
       "source": "../cookbooks/hardening",
       "cache_key": null,
-      "scm_info": {
-        "scm": "git",
-        "remote": "https://github.com/chef/effortless_config.git",
-        "revision": "88c3efc5b53c7b03b834e0236b8e8949fd4fc534",
-        "working_tree_clean": false,
-        "published": true,
-        "synchronized_remote_branches": [
-          "origin/HEAD -> origin/master",
-          "origin/master"
-        ]
-      },
+      "scm_info": null,
       "source_options": {
         "path": "../cookbooks/hardening"
       }
@@ -43,21 +33,11 @@
     },
     "patching": {
       "version": "0.1.0",
-      "identifier": "b864f798241b308df989477fdc23890116e988b9",
-      "dotted_decimal_identifier": "51902410286963504.39962339721600035.150637772376249",
+      "identifier": "5cc28ac2a578688b43aee6d6f48f58f4b314b204",
+      "dotted_decimal_identifier": "26109599084279912.39199440238998671.97807999742468",
       "source": "../cookbooks/patching",
       "cache_key": null,
-      "scm_info": {
-        "scm": "git",
-        "remote": "https://github.com/chef/effortless_config.git",
-        "revision": "88c3efc5b53c7b03b834e0236b8e8949fd4fc534",
-        "working_tree_clean": false,
-        "published": true,
-        "synchronized_remote_branches": [
-          "origin/HEAD -> origin/master",
-          "origin/master"
-        ]
-      },
+      "scm_info": null,
       "source_options": {
         "path": "../cookbooks/patching"
       }
