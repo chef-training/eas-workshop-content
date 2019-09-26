@@ -10,6 +10,7 @@ include_controls 'linux-baseline' do
   skip_control 'os-08'
   skip_control 'package-07'
   skip_control 'package-08'
+  skip_control 'sysctl-14'
   skip_control 'sysctl-24'
   skip_control 'sysctl-33'
 end
